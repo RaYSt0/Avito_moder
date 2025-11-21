@@ -1,0 +1,119 @@
+:root {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--app-bg, #f5f5f5);
+  color: var(--app-color, #0f172a);
+}
+
+:root {
+  --chart-axis: rgba(148, 163, 184, 0.8);
+  --chart-grid: rgba(148, 163, 184, 0.35);
+}
+
+[data-theme='light'] {
+  --chart-axis: rgba(51, 65, 85, 0.8);
+  --chart-grid: rgba(71, 85, 105, 0.25);
+}
+
+[data-theme='dark'] {
+  --chart-axis: rgba(226, 232, 240, 0.7);
+  --chart-grid: rgba(148, 163, 184, 0.25);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0 24px;
+  background: rgba(2, 6, 23, 0.85);
+  backdrop-filter: blur(8px);
+}
+
+.app-content {
+  padding: 24px;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+.nav-link_active {
+  color: #ffffff;
+}
+
+.app-header__actions {
+  flex-wrap: wrap;
+}
+
+.app-header__user {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  line-height: 1.2;
+}
+
+.page-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 24px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+[data-theme='light'] .app-header {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.08);
+}
+
+[data-theme='light'] .nav-link {
+  color: rgba(15, 23, 42, 0.6);
+}
+
+[data-theme='light'] .nav-link:hover {
+  color: rgba(15, 23, 42, 0.85);
+}
+
+[data-theme='light'] .nav-link_active {
+  color: #0f172a;
+}
