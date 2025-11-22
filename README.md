@@ -35,7 +35,7 @@
 # 1. API
 cd Backend
 npm install
-npm run dev          # сервер на http://localhost:3001
+npm start          # сервер на http://localhost:3001
 
 # 2. Фронтенд
 cd ../Frontend
@@ -56,11 +56,6 @@ npm run dev          # приложение на http://localhost:5173
 - `Frontend/src/providers` – общие провайдеры (темы, router, React Query)
 - `Frontend/src/utils` – форматирование дат/цен, навигация между объявлениями
 - `Backend/src` – контроллеры, роуты и мок-данные API
-
-### Тесты и дальнейшее развитие
-- Добавить unit-тесты (React Testing Library + Vitest)
-- Реализовать bulk-операции и PDF-отчёты из списка «звёздочек»
-- Расширить real-time обновления через WebSocket или SSE
 
 ### Почему такие решения
 - **React Query**: кэширование, рефетч, отмена запросов «из коробки» — критично при сложных фильтрах.
